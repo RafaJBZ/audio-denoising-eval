@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Experiment artifacts
+experiments/mlruns/
+experiments/runs/
+experiments/*_report.json
+experiments/inference_outputs/
+
+# Python env files
+.env
+.cursor
+experiments/eval_set/
+paper/

@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: audio-denoising-eval-app
+    ports:
+      - "8501:8501"
+    environment:
+      - LIBRISPEECH_ROOT=/app/data/librispeech
+      - AUDIOSET_ROOT=/app/data/audioset
+      - MANIFEST_DIR=/app/data/manifests
+      - OUTPUT_ROOT=/app/experiments/runs
+    volumes:
+      - ./data:/app/data
+      - ./experiments:/app/experiments
+
